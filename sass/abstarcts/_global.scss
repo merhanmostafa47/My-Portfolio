@@ -39,6 +39,11 @@ h6 {
     font-weight: 500;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 img {
     max-inline-size: 100%;
     vertical-align: middle;
@@ -59,6 +64,10 @@ body {
     // non-standard & it will not work for every user
     // sets the color of the highlight that appears over a link while it's being tapped
     -webkit-tap-highlight-color: transparent;
+
+    &.hide-scrolling {
+        overflow-y: hidden;
+    }
 }
 
 body:before {
@@ -72,11 +81,16 @@ body:before {
     opacity: 0.12;
 }
 
-main {
+.main {
     max-width: 1200px;
     margin: auto;
-}
 
+    &.fade-out {
+        opacity: 0;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+    }
+}
 
 /*Section*/
 section {
@@ -103,8 +117,6 @@ section {
             text-transform: capitalize;
         }
     }
-
-
 }
 
 .container {
