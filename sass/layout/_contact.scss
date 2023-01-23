@@ -1,0 +1,76 @@
+/*-------------------------
+Contact Section
+----------------------------*/
+.contact-section {
+    .contact-form {
+        padding: 0 15px;
+
+        .input-group {
+            inline-size: 100%;
+            margin-block-end: 30px;
+
+            .input-control {
+                display: block;
+                padding: 0 20px;
+                @include size(100%, 3.125rem);
+                border-radius: 25px;
+                border: 1px solid transparent;
+                font-family: inherit;
+                @include font(400, 1rem, blue-dark);
+                background-color: $white-alpha-25;
+                transition: border-color .3s ease;
+
+                &::placeholder {
+                    @include font(300, 1rem, blue-dark);
+                    opacity: 0.8;
+                    text-transform: capitalize;
+                }
+
+                &:focus {
+                    border-color: $white-alpha-40;
+                }
+            }
+
+            textarea.input-control {
+                block-size: 120px;
+                padding-block-start: 15px;
+                resize: none;
+            }
+        }
+    }
+
+    .contact-info {
+        padding: 0 15px;
+
+        .contact-info-item {
+            margin: 0 0 30px;
+            padding: 0 0 0 20px;
+
+            h3 {
+                @include font(500, 20px, blue-dark);
+                text-transform: capitalize;
+                margin: 0 0 5px;
+            }
+
+            .social-links {
+                @include flex(flex-start, center, row);
+
+                a {
+                    @include flex(center, center, row);
+                    @include size(40px, 40px);
+                    margin: 6px 4px 0 0;
+                    background-color: $white-alpha-25;
+                    border: 1px solid $white-alpha-40;
+                    border-radius: 50%;
+                    color: $main-color;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: $white;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

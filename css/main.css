@@ -176,6 +176,11 @@ button {
 .btn:hover::before {
   inline-size: 100%;
 }
+.btn:active {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
 
 /*-------------------------
 Home Section
@@ -482,6 +487,84 @@ Portfolio popup
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li span a {
   text-transform: lowercase;
   color: #e02f6b;
+}
+
+/*-------------------------
+Contact Section
+----------------------------*/
+.contact-section .contact-form {
+  padding: 0 15px;
+}
+.contact-section .contact-form .input-group {
+  inline-size: 100%;
+  margin-block-end: 30px;
+}
+.contact-section .contact-form .input-group .input-control {
+  display: block;
+  padding: 0 20px;
+  inline-size: 100%;
+  block-size: 3.125rem;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+  color: blue-dark;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: border-color 0.3s ease;
+}
+.contact-section .contact-form .input-group .input-control::placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  color: blue-dark;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+.contact-section .contact-form .input-group .input-control:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.contact-section .contact-form .input-group textarea.input-control {
+  block-size: 120px;
+  padding-block-start: 15px;
+  resize: none;
+}
+.contact-section .contact-info {
+  padding: 0 15px;
+}
+.contact-section .contact-info .contact-info-item {
+  margin: 0 0 30px;
+  padding: 0 0 0 20px;
+}
+.contact-section .contact-info .contact-info-item h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: blue-dark;
+  text-transform: capitalize;
+  margin: 0 0 5px;
+}
+.contact-section .contact-info .contact-info-item .social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.contact-section .contact-info .contact-info-item .social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  inline-size: 40px;
+  block-size: 40px;
+  margin: 6px 4px 0 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: #e02f6b;
+  transition: all 0.3s ease;
+}
+.contact-section .contact-info .contact-info-item .social-links a:hover {
+  color: #fff;
+  background-color: #e02f6b;
 }
 
 /*# sourceMappingURL=main.css.map */
