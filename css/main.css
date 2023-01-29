@@ -61,14 +61,16 @@ body {
   color: #18293c;
   line-height: 1.6;
   overflow-x: hidden;
-  padding: 5vh 1rem;
+  padding: 35px 15px;
   -webkit-tap-highlight-color: transparent;
+}
+body:hover span::before, body:hover span::after {
+  inline-size: 50%;
 }
 body.hide-scrolling {
   overflow-y: hidden;
 }
-
-body:before {
+body::before {
   content: "";
   position: fixed;
   inline-size: 100%;
@@ -83,6 +85,7 @@ body:before {
 .main {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 .main.fade-out {
   opacity: 0;
@@ -90,17 +93,27 @@ body:before {
   transition: all 0.5s ease-in-out;
 }
 
-/*Section*/
+/*--------------------
+Section
+----------------------*/
 section {
   background-color: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 1.875rem;
-  min-block-size: 90vh;
+  min-block-size: calc(100vh - 70px);
   padding: 7.5rem 0;
   backdrop-filter: blur(5px);
+  display: none;
 }
 section.sec-padding {
   padding: 80px 0;
+}
+section.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+section.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
 }
 section .section-title {
   padding: 0 15px;
@@ -120,7 +133,9 @@ section .section-title h2 {
   inline-size: 100%;
 }
 
-/*Custom Scrollbar */
+/*--------------------
+Custom Scrollbar
+----------------------*/
 ::-webkit-scrollbar {
   inline-size: 5px;
 }
@@ -134,7 +149,9 @@ section .section-title h2 {
   border-radius: 1.875rem;
 }
 
-/*Buttons */
+/*--------------------
+Buttons
+----------------------*/
 button {
   font-family: inherit;
   user-select: none;
@@ -182,10 +199,186 @@ button {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
 
+/*--------------------
+Overlay
+----------------------*/
+.overlay {
+  position: fixed;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: transparent;
+  z-index: 200;
+  visibility: hidden;
+}
+.overlay.active {
+  visibility: visible;
+}
+
+/*--------------------
+Animation Keyframes
+----------------------*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*-------------------------
+Header
+----------------------------*/
+.header {
+  padding: 20px 0 0;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  z-index: 1;
+}
+.header .nav-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  inline-size: 3.125rem;
+  block-size: 3.125rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  margin: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.header .nav-toggler.hide {
+  opacity: 0;
+  transition: none;
+}
+.header .nav-toggler span {
+  inline-size: 24px;
+  block-size: 2px;
+  background-color: #e02f6b;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.header .nav-toggler span::before, .header .nav-toggler span::after {
+  content: "";
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 0;
+  background-color: #e02f6b;
+  transition: all 0.3s ease;
+}
+.header .nav-toggler span::before {
+  inset-inline-start: 0;
+  transform: translateY(-8px);
+}
+.header .nav-toggler span::after {
+  inset-inline-end: 0;
+  transform: translateY(8px);
+}
+.header .nav {
+  position: fixed;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  padding: 35px 15px;
+  overflow-y: auto;
+  visibility: hidden;
+}
+.header .nav .nav-inner {
+  inline-size: 100%;
+  max-inline-size: 1200px;
+  min-block-size: calc(100vh - 70px);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1.875rem;
+  backdrop-filter: blur(5px);
+  padding: 50px 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.header .nav .nav-inner .nav-list .nav-item {
+  text-align: center;
+}
+.header .nav .nav-inner .nav-list .nav-item .nav-link {
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #18293c;
+  text-transform: capitalize;
+  display: block;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.header .nav .nav-inner .nav-list .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  inline-size: 0%;
+  block-size: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: -1;
+  transition: inline-size 0.5s ease;
+}
+.header .nav .nav-inner .nav-list .nav-item .nav-link:hover {
+  color: #e02f6b;
+}
+.header .nav .nav-inner .nav-list .nav-item .nav-link:hover::before {
+  inline-size: 100%;
+}
+.header.active {
+  position: fixed;
+  inset-block-start: 35px;
+  padding: 20px 15px;
+}
+.header.active .container {
+  max-inline-size: 1200px;
+  margin: auto;
+}
+.header.active .nav-toggler span {
+  background-color: transparent;
+}
+.header.active .nav-toggler span::before {
+  transform: rotate(45deg);
+}
+.header.active .nav-toggler span::after {
+  transform: rotate(-45deg);
+}
+.header.active .nav {
+  visibility: visible;
+}
+.header.active .nav .nav-inner {
+  opacity: 1;
+}
+.header:not(.active) .nav-toggler:hover span::before, .header:not(.active) .nav-toggler:hover span::after {
+  inline-size: 50%;
+}
+
 /*-------------------------
 Home Section
 ----------------------------*/
-.home-section {
+.home-section.active {
   display: flex;
   justify-content: unset;
   align-items: center;

@@ -59,7 +59,18 @@ body {
     color: $blue-dark;
     line-height: 1.6;
     overflow-x: hidden;
-    padding: 5vh 1rem;
+
+    &:hover {
+        span {
+
+            &::before,
+            &::after {
+                inline-size: 50%;
+            }
+        }
+    }
+
+    padding: 35px 15px;
 
     // non-standard & it will not work for every user
     // sets the color of the highlight that appears over a link while it's being tapped
@@ -68,22 +79,23 @@ body {
     &.hide-scrolling {
         overflow-y: hidden;
     }
-}
 
-body:before {
-    content: "";
-    position: fixed;
-    @include size(100%, 100%);
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    background-color: $green-yellow;
-    z-index: -1;
-    opacity: 0.12;
+    &::before {
+        content: "";
+        position: fixed;
+        @include size(100%, 100%);
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        background-color: $green-yellow;
+        z-index: -1;
+        opacity: 0.12;
+    }
 }
 
 .main {
     max-width: 1200px;
     margin: auto;
+    position: relative;
 
     &.fade-out {
         opacity: 0;
@@ -92,18 +104,29 @@ body:before {
     }
 }
 
-/*Section*/
+/*--------------------
+Section
+----------------------*/
 section {
     background-color: $white-alpha-25;
     border: 1px solid $white-alpha-40;
     border-radius: 1.875rem;
-    min-block-size: 90vh;
+    min-block-size: calc(100vh - 70px);
     padding: 7.5rem 0;
     backdrop-filter: $backdrop-filter-blur;
-
+    display: none;
 
     &.sec-padding {
         padding: 80px 0;
+    }
+
+    &.active {
+        display: block;
+        animation: fadeIn .5s ease-in-out forwards;
+    }
+
+    &.fade-out {
+        animation: fadeOut .5s ease-in-out forwards;
     }
 
     .section-title {
@@ -124,7 +147,9 @@ section {
     inline-size: 100%;
 }
 
-/*Custom Scrollbar */
+/*--------------------
+Custom Scrollbar
+----------------------*/
 ::-webkit-scrollbar {
     inline-size: 5px;
 }
@@ -138,7 +163,9 @@ section {
     border-radius: 1.875rem;
 }
 
-/*Buttons */
+/*--------------------
+Buttons
+----------------------*/
 button {
     font-family: inherit;
     user-select: none;
@@ -184,5 +211,45 @@ button {
         border-color: $white-alpha-40 !important;
         color: $white !important;
         background-color: $white-alpha-25 !important;
+    }
+}
+
+/*--------------------
+Overlay
+----------------------*/
+.overlay {
+    position: fixed;
+    @include size(100%, 100%);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: transparent;
+    z-index: 200;
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+}
+
+/*--------------------
+Animation Keyframes
+----------------------*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

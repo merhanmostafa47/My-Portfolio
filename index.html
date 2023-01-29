@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -9,15 +9,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <!-- Bootstrap Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
-
+  <!-- CSS stylesheet -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <!-- Start overlay -->
+  <div class="overlay"></div>
+  <!-- End overlay -->
+
   <!-- Start main -->
   <main class="main">
+
+    <!-- Start header -->
+    <header class="header">
+      <div class="container">
+        <div class="row justify-content-end">
+          <button type="button" class="nav-toggler">
+            <span></span>
+          </button>
+          <nav class="nav">
+            <div class="nav-inner">
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link link-item">home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link link-item">about</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#portfolio" class="nav-link link-item">portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link link-item">contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- End header -->
+
     <!-- Start home section -->
-    <section class="home-section d-none">
+    <section class="home-section active" id="home">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-between w-100">
           <div class="home-text col-lg-6 col-md-12">
@@ -25,8 +60,8 @@
             <h1>Merhan Mostafa</h1>
             <h2>Frontend web developer</h2>
             <div class="btns">
-              <a href="#" class="btn">more about me</a>
-              <a href="#" class="btn">portfolio</a>
+              <a href="#about" class="btn link-item">more about me</a>
+              <a href="#portfolio" class="btn link-item">portfolio</a>
             </div>
           </div>
           <div class="home-image col-lg-6 col-md-12">
@@ -40,7 +75,7 @@
     <!-- End home section -->
 
     <!-- Start about section -->
-    <section class="about-section sec-padding d-none">
+    <section class="about-section sec-padding" id="about">
       <div class="container">
         <div class="section-title">
           <h2>
@@ -128,8 +163,8 @@
             </div>
             <!-- Experience tab end -->
 
-            <a href="#" class="btn">download cv</a>
-            <a href="#" class="btn">contact me</a>
+            <a href="cv.pdf" target="_blank" class="btn">download cv</a>
+            <a href="#contact" class="btn link-item">contact me</a>
           </div>
         </div>
       </div>
@@ -137,7 +172,7 @@
     <!-- End about section -->
 
     <!-- Start portfolio section -->
-    <section class="portfolio-section sec-padding d-none">
+    <section class="portfolio-section sec-padding" id="portfolio">
       <div class="container">
         <div class="section-title">
           <h2>
@@ -300,7 +335,7 @@
     <!-- End portfolio section -->
 
     <!-- Start contact section -->
-    <section class="contact-section sec-padding">
+    <section class="contact-section sec-padding" id="contact">
       <div class="container">
         <div class="section-title">
           <h2>

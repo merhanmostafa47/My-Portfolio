@@ -2,7 +2,10 @@
 Home Section
 ----------------------------*/
 .home-section {
-    @include flex(unset, center, row);
+
+    &.active {
+        @include flex(unset, center, row);
+    }
 
     .container {
         @include flex(space-between, center, row);
