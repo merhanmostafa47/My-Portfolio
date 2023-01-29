@@ -235,6 +235,70 @@ Animation Keyframes
     opacity: 0;
   }
 }
+@keyframes zoonInOut {
+  0%, 100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes bounceTop {
+  0%, 100% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+.bg-circles {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  block-size: 100%;
+  max-inline-size: 1200px;
+  inline-size: calc(100% - 30px);
+  transform: translateX(-50%);
+}
+.bg-circles .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.bg-circles .circle.circle-1 {
+  inline-size: 60px;
+  block-size: 60px;
+  background-color: #0000ff;
+  inset-inline-start: 5%;
+  inset-block-start: 10%;
+  opacity: 0.3;
+  animation: zoonInOut 8s linear infinite;
+}
+.bg-circles .circle.circle-2 {
+  inline-size: 80px;
+  block-size: 80px;
+  background-color: #e02f6b;
+  inset-inline-start: 30%;
+  inset-block-start: 50%;
+  opacity: 0.4;
+  animation: bounceTop 5s ease-in-out infinite;
+}
+.bg-circles .circle.circle-3 {
+  inline-size: 120px;
+  block-size: 120px;
+  background-color: #fff;
+  inset-inline-end: -60px;
+  inset-block-start: 40%;
+  opacity: 0.6;
+}
+.bg-circles .circle.circle-4 {
+  inline-size: 50px;
+  block-size: 50px;
+  background-color: #ffa500;
+  inset-inline-start: -30px;
+  inset-block-start: 80%;
+  opacity: 0.6;
+}
+
 /*-------------------------
 Header
 ----------------------------*/

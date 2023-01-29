@@ -253,3 +253,27 @@ Animation Keyframes
         opacity: 0;
     }
 }
+
+@keyframes zoonInOut {
+
+    0%,
+    100% {
+        transform: scale(.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceTop {
+
+    0%,
+    100% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
