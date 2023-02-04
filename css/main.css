@@ -32,6 +32,7 @@ a {
 h1,
 h2 {
   font-weight: 600;
+  line-height: 1.6;
 }
 
 h3,
@@ -39,6 +40,7 @@ h4,
 h5,
 h6 {
   font-weight: 500;
+  line-height: 1.6;
 }
 
 ul {
@@ -127,10 +129,20 @@ section .section-title h2 {
   color: #18293c;
   text-transform: capitalize;
 }
+@media (max-width: 575px) {
+  section .section-title h2 {
+    font-size: 2rem;
+  }
+}
 
 .container {
-  padding: 0 40px;
+  padding: 0 2.5rem;
   inline-size: 100%;
+}
+@media (max-width: 575px) {
+  .container {
+    padding-inline: 1.25rem;
+  }
 }
 
 /*--------------------
@@ -174,6 +186,11 @@ button {
   overflow: hidden;
   vertical-align: middle;
   transition: color 0.3s ease;
+}
+@media (max-width: 575px) {
+  .btn {
+    font-size: 0.9rem;
+  }
 }
 .btn:hover {
   color: #fff;
@@ -394,6 +411,11 @@ Header
   transition: color 0.3s ease;
   position: relative;
 }
+@media (max-width: 575px) {
+  .header .nav .nav-inner .nav-list .nav-item .nav-link {
+    font-size: 2rem;
+  }
+}
 .header .nav .nav-inner .nav-list .nav-item .nav-link::before {
   content: "";
   position: absolute;
@@ -454,27 +476,63 @@ Home Section
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 991px) {
+  .home-section .container {
+    flex-direction: column-reverse;
+  }
+}
 .home-section .container .home-text {
   text-transform: capitalize;
 }
+@media (max-width: 991px) {
+  .home-section .container .home-text {
+    text-align: center;
+    margin-block-start: 2rem;
+  }
+}
 .home-section .container .home-text p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #18293c;
 }
 .home-section .container .home-text h1 {
   font-weight: 600;
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #18293c;
+}
+@media (max-width: 575px) {
+  .home-section .container .home-text h1 {
+    font-size: 1.875rem;
+  }
 }
 .home-section .container .home-text h2 {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #18293c;
   margin-block-end: 2rem;
 }
+@media (max-width: 575px) {
+  .home-section .container .home-text h2 {
+    font-size: 1.125rem;
+  }
+}
 .home-section .container .home-text .btn {
   margin: 0 1rem 1rem 0;
+}
+@media (max-width: 991px) {
+  .home-section .container .home-text .btn {
+    margin: 0 7px 15px;
+  }
+}
+@media (max-width: 575px) {
+  .home-section .container .home-text .btn {
+    min-inline-size: 11rem;
+  }
+}
+@media (max-width: 991px) {
+  .home-section .container .home-image {
+    max-inline-size: 21.875rem;
+  }
 }
 .home-section .container .home-image .img-box {
   background-color: rgba(255, 255, 255, 0.25);
@@ -509,6 +567,11 @@ About Section
 .about-section .about-text {
   padding: 0 1rem;
 }
+@media (max-width: 767px) {
+  .about-section .about-text {
+    margin-block-start: 1.875rem;
+  }
+}
 .about-section .about-text p {
   line-height: 1.8;
   margin-block-end: 20px;
@@ -532,6 +595,11 @@ About Section
   text-transform: capitalize;
   margin: 0 10px 10px 0;
 }
+@media (max-width: 575px) {
+  .about-section .about-text .skills .skill-item {
+    font-size: 0.8rem;
+  }
+}
 .about-section .about-text .about-tabs {
   margin-block-start: 20px;
 }
@@ -541,7 +609,7 @@ About Section
   border: none;
   display: inline-block;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #18293c;
   text-transform: capitalize;
   cursor: pointer;
@@ -549,6 +617,11 @@ About Section
   position: relative;
   opacity: 0.5;
   transition: all 0.3s ease;
+}
+@media (max-width: 575px) {
+  .about-section .about-text .about-tabs .tab-item {
+    font-size: 1rem;
+  }
 }
 .about-section .about-text .about-tabs .tab-item:last-child {
   margin: 0;
@@ -619,6 +692,11 @@ About Section
   color: #e02f6b;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .about-section .about-text .tab-content .timeline .timeline-item .date {
+    font-size: 0.9rem;
+  }
+}
 .about-section .about-text .tab-content .timeline .timeline-item h4 {
   font-weight: 500;
   font-size: 1.125rem;
@@ -626,11 +704,23 @@ About Section
   text-transform: capitalize;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .about-section .about-text .tab-content .timeline .timeline-item h4 {
+    font-size: 1rem;
+  }
+}
 .about-section .about-text .tab-content .timeline .timeline-item h4 span {
   font-weight: 400;
 }
 .about-section .about-text .btn {
   margin: 0 15px 15px 0;
+}
+@media (max-width: 575px) {
+  .about-section .about-text .btn {
+    display: block;
+    inline-size: 11rem;
+    margin-inline: auto;
+  }
 }
 
 /*-------------------------
@@ -641,6 +731,12 @@ Portfolio Section
 }
 .portfolio-section .portfolio-item {
   margin: 15px 0;
+}
+@media (max-width: 767px) {
+  .portfolio-section .portfolio-item {
+    text-align: center;
+    margin-block-end: 2rem;
+  }
 }
 .portfolio-section .portfolio-item .portfolio-item-thumbnail {
   padding: 10px;
@@ -659,6 +755,11 @@ Portfolio Section
   color: #18293c;
   text-transform: capitalize;
   margin: 20px 0;
+}
+@media (max-width: 575px) {
+  .portfolio-section .portfolio-item .portfolio-item-title {
+    font-size: 1rem;
+  }
 }
 .portfolio-section .portfolio-item .portfolio-item-details {
   display: none;
@@ -694,6 +795,11 @@ Portfolio popup
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  .portfolio-popup .pp-inner {
+    padding: 30px 15px;
+  }
+}
 .portfolio-popup .pp-inner .pp-content {
   max-inline-size: 900px;
   inline-size: 100%;
@@ -723,9 +829,14 @@ Portfolio popup
   border-radius: 10px;
 }
 .portfolio-popup .pp-inner .pp-content .pp-header h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: capitalize;
   margin: 20px 0 15px;
+}
+@media (max-width: 575px) {
+  .portfolio-popup .pp-inner .pp-content .pp-header h3 {
+    font-size: 1.25rem;
+  }
 }
 .portfolio-popup .pp-inner .pp-content .pp-body .description {
   margin-block-end: 20px;
@@ -733,10 +844,20 @@ Portfolio popup
 .portfolio-popup .pp-inner .pp-content .pp-body .description p {
   line-height: 1.8;
 }
+@media (max-width: 575px) {
+  .portfolio-popup .pp-inner .pp-content .pp-body .description p {
+    font-size: 0.9rem;
+  }
+}
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li {
   margin-block-end: 10px;
   text-transform: capitalize;
   font-weight: 500;
+}
+@media (max-width: 575px) {
+  .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li {
+    font-size: 0.9rem;
+  }
 }
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li span {
   font-weight: 300;
@@ -752,6 +873,11 @@ Contact Section
 .contact-section .contact-form {
   padding: 0 15px;
 }
+@media (max-width: 991px) {
+  .contact-section .contact-form {
+    order: 2;
+  }
+}
 .contact-section .contact-form .input-group {
   inline-size: 100%;
   margin-block-end: 30px;
@@ -766,16 +892,26 @@ Contact Section
   font-family: inherit;
   font-weight: 400;
   font-size: 1rem;
-  color: blue-dark;
+  color: #18293c;
   background-color: rgba(255, 255, 255, 0.25);
   transition: border-color 0.3s ease;
+}
+@media (max-width: 575px) {
+  .contact-section .contact-form .input-group .input-control {
+    font-size: 0.8rem;
+  }
 }
 .contact-section .contact-form .input-group .input-control::placeholder {
   font-weight: 300;
   font-size: 1rem;
-  color: blue-dark;
+  color: #18293c;
   opacity: 0.8;
   text-transform: capitalize;
+}
+@media (max-width: 575px) {
+  .contact-section .contact-form .input-group .input-control::placeholder {
+    font-size: 0.8rem;
+  }
 }
 .contact-section .contact-form .input-group .input-control:focus {
   border-color: rgba(255, 255, 255, 0.4);
@@ -788,6 +924,13 @@ Contact Section
 .contact-section .contact-info {
   padding: 0 15px;
 }
+@media (max-width: 991px) {
+  .contact-section .contact-info {
+    order: 1;
+    margin-block-end: 15px;
+    padding: 0;
+  }
+}
 .contact-section .contact-info .contact-info-item {
   margin: 0 0 30px;
   padding: 0 0 0 20px;
@@ -795,9 +938,14 @@ Contact Section
 .contact-section .contact-info .contact-info-item h3 {
   font-weight: 500;
   font-size: 20px;
-  color: blue-dark;
+  color: #18293c;
   text-transform: capitalize;
   margin: 0 0 5px;
+}
+@media (max-width: 575px) {
+  .contact-section .contact-info .contact-info-item h3 {
+    font-size: 18px;
+  }
 }
 .contact-section .contact-info .contact-info-item .social-links {
   display: flex;
@@ -818,6 +966,13 @@ Contact Section
   border-radius: 50%;
   color: #e02f6b;
   transition: all 0.3s ease;
+}
+@media (max-width: 575px) {
+  .contact-section .contact-info .contact-info-item .social-links a {
+    inline-size: 35px;
+    block-size: 35px;
+    font-size: 0.8rem;
+  }
 }
 .contact-section .contact-info .contact-info-item .social-links a:hover {
   color: #fff;

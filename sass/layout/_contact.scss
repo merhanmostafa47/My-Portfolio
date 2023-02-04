@@ -5,6 +5,10 @@ Contact Section
     .contact-form {
         padding: 0 15px;
 
+        @include breakpoints(md) {
+            order: 2;
+        }
+
         .input-group {
             inline-size: 100%;
             margin-block-end: 30px;
@@ -16,14 +20,22 @@ Contact Section
                 border-radius: 25px;
                 border: 1px solid transparent;
                 font-family: inherit;
-                @include font(400, 1rem, blue-dark);
+                @include font(400, 1rem, $blue-dark);
                 background-color: $white-alpha-25;
                 transition: border-color .3s ease;
 
+                @include breakpoints(xs) {
+                    font-size: .8rem
+                }
+
                 &::placeholder {
-                    @include font(300, 1rem, blue-dark);
+                    @include font(300, 1rem, $blue-dark);
                     opacity: 0.8;
                     text-transform: capitalize;
+
+                    @include breakpoints(xs) {
+                        font-size: .8rem
+                    }
                 }
 
                 &:focus {
@@ -42,14 +54,24 @@ Contact Section
     .contact-info {
         padding: 0 15px;
 
+        @include breakpoints(md) {
+            order: 1;
+            margin-block-end: 15px;
+            padding: 0;
+        }
+
         .contact-info-item {
             margin: 0 0 30px;
             padding: 0 0 0 20px;
 
             h3 {
-                @include font(500, 20px, blue-dark);
+                @include font(500, 20px, $blue-dark);
                 text-transform: capitalize;
                 margin: 0 0 5px;
+
+                @include breakpoints(xs) {
+                    font-size: 18px
+                }
             }
 
             .social-links {
@@ -64,6 +86,11 @@ Contact Section
                     border-radius: 50%;
                     color: $main-color;
                     transition: all .3s ease;
+
+                    @include breakpoints(xs) {
+                        @include size(35px, 35px);
+                        font-size: .8rem;
+                    }
 
                     &:hover {
                         color: $white;

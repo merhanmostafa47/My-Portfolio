@@ -22,6 +22,10 @@ About Section
     .about-text {
         padding: 0 1rem;
 
+        @include breakpoints(sm) {
+            margin-block-start: 1.875rem;
+        }
+
         p {
             line-height: 1.8;
             margin-block-end: 20px
@@ -44,6 +48,10 @@ About Section
                 padding: 5px 15px;
                 text-transform: capitalize;
                 margin: 0 10px 10px 0;
+
+                @include breakpoints(xs) {
+                    font-size: .8rem;
+                }
             }
         }
 
@@ -55,13 +63,17 @@ About Section
                 background-color: transparent;
                 border: none;
                 display: inline-block;
-                @include font(500, 20px, $blue-dark);
+                @include font(500, 1.25rem, $blue-dark);
                 text-transform: capitalize;
                 cursor: pointer;
                 margin: 0 1.875rem 0 0;
                 position: relative;
                 opacity: .5;
                 transition: all .3s ease;
+
+                @include breakpoints(xs) {
+                    font-size: 1rem;
+                }
 
                 &:last-child {
                     margin: 0;
@@ -138,12 +150,20 @@ About Section
                         display: block;
                         @include font(400, 1rem, $main-color);
                         margin: 0 0 10px;
+
+                        @include breakpoints(xs) {
+                            font-size: .9rem;
+                        }
                     }
 
                     h4 {
                         @include font(500, 1.125rem, $blue-dark);
                         text-transform: capitalize;
                         margin: 0 0 10px;
+
+                        @include breakpoints(xs) {
+                            font-size: 1rem;
+                        }
 
                         span {
                             font-weight: 400;
@@ -155,6 +175,12 @@ About Section
 
         .btn {
             margin: 0 15px 15px 0;
+
+            @include breakpoints(xs) {
+                display: block;
+                inline-size: 11rem;
+                margin-inline: auto;
+            }
         }
     }
 }

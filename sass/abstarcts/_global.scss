@@ -30,6 +30,7 @@ a {
 h1,
 h2 {
     font-weight: 600;
+    line-height: 1.6;
 }
 
 h3,
@@ -37,6 +38,7 @@ h4,
 h5,
 h6 {
     font-weight: 500;
+    line-height: 1.6;
 }
 
 ul {
@@ -138,13 +140,21 @@ section {
         h2 {
             @include font(600, 2.5rem, $blue-dark);
             text-transform: capitalize;
+
+            @include breakpoints(xs) {
+                font-size: 2rem;
+            }
         }
     }
 }
 
 .container {
-    padding: 0 40px;
+    padding: 0 2.5rem;
     inline-size: 100%;
+
+    @include breakpoints(xs) {
+        padding-inline: 1.25rem;
+    }
 }
 
 /*--------------------
@@ -186,6 +196,10 @@ button {
     overflow: hidden;
     vertical-align: middle;
     transition: color .3s ease;
+
+    @include breakpoints(xs) {
+        font-size: .9rem;
+    }
 
     &:hover {
         color: $white;

@@ -7,6 +7,11 @@ Portfolio Section
     .portfolio-item {
         margin: 15px 0;
 
+        @include breakpoints(sm) {
+            text-align: center;
+            margin-block-end: 2rem;
+        }
+
         .portfolio-item-thumbnail {
             padding: 10px;
             background-color: $white-alpha-25;
@@ -24,6 +29,10 @@ Portfolio Section
             @include font(500, 1.25rem, $blue-dark);
             text-transform: capitalize;
             margin: 20px 0;
+
+            @include breakpoints(xs) {
+                font-size: 1rem;
+            }
         }
 
         .portfolio-item-details {
@@ -60,6 +69,10 @@ Portfolio popup
         padding: 40px 15px;
         @include flex(center, center, column);
 
+        @include breakpoints(sm) {
+            padding: 30px 15px;
+        }
+
         .pp-content {
             max-inline-size: 900px;
             inline-size: 100%;
@@ -89,9 +102,13 @@ Portfolio popup
                 }
 
                 h3 {
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     text-transform: capitalize;
                     margin: 20px 0 15px;
+
+                    @include breakpoints(xs) {
+                        font-size: 1.25rem
+                    }
                 }
             }
 
@@ -101,6 +118,10 @@ Portfolio popup
 
                     p {
                         line-height: 1.8;
+
+                        @include breakpoints(xs) {
+                            font-size: .9rem
+                        }
                     }
                 }
 
@@ -110,6 +131,10 @@ Portfolio popup
                             margin-block-end: 10px;
                             text-transform: capitalize;
                             font-weight: 500;
+
+                            @include breakpoints(xs) {
+                                font-size: .9rem
+                            }
 
                             span {
                                 font-weight: 300;

@@ -88,6 +88,9 @@ Header
                         padding: 8px 15px;
                         transition: color .3s ease;
                         position: relative;
+                        @include breakpoints(xs) {
+                            font-size: 2rem
+                        }
 
 
                         &::before {
