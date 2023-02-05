@@ -1,4 +1,42 @@
 /*------------------------
+ Preloader 1
+---------------------------*/
+// window.addEventListener("load", () => {
+//   document.querySelector(".main").classList.remove("d-none");
+//   document.querySelector(".home-section").classList.add("active");
+//   /*------------------------
+// Page Loading
+// ---------------------------*/
+//   document.querySelector(".page-loader").classList.add("fade-out");
+//   setTimeout(() => {
+//     document.querySelector(".page-loader").style.display = "none";
+//   }, 1200);
+// });
+
+/*------------------------
+ Preloader 2
+---------------------------*/
+(function ($) {
+  "use strict";
+  function loader() {
+    $(window).on("load", function () {
+      $("#ctn-preloader").addClass("loaded");
+      document.querySelector(".main").classList.remove("d-none");
+      document.querySelector(".home-section").classList.add("active");
+
+      if ($("#ctn-preloader").hasClass("loaded")) {
+        $("#preloader")
+          .delay(1500)
+          .queue(function () {
+            $(this).remove();
+          });
+      }
+    });
+  }
+  loader();
+})(jQuery);
+
+/*------------------------
 Toggle navbar
 ---------------------------*/
 const navToggler = document.querySelector(".nav-toggler");
