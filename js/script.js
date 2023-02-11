@@ -105,6 +105,33 @@ tabsContainer.addEventListener("click", (e) => {
 });
 
 /*------------------------
+Projects Filter
+---------------------------*/
+let dir = $("html").attr("dir");
+$(window).on("load", () => {
+  $(".portfolio-section .filters ul li.active").click();
+});
+
+// Products Grid
+var $projectsGrid = $(".projects-grid").isotope({
+  itemSelector: ".all",
+  percentPosition: true,
+  isOriginLeft: dir == "ltr" ? true : false,
+  masonry: {
+    columnWidth: ".all",
+  },
+});
+$(".portfolio-section .filters ul li").click(function () {
+  $(".portfolio-section .filters ul li").removeClass("active");
+  $(this).addClass("active");
+
+  var data = $(this).attr("data-filter");
+  $projectsGrid.isotope({
+    filter: data,
+  });
+});
+
+/*------------------------
 Portfolio Item Details Popup
 ---------------------------*/
 document.addEventListener("click", (e) => {

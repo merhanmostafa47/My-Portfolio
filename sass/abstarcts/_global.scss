@@ -56,11 +56,10 @@ body {
     background-image: linear-gradient(to bottom right, $pink-light, $cyan-light);
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: $blue-dark;
+    @include font(300, 1rem,$blue-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    padding: 35px 15px;
 
     &:hover {
         span {
@@ -72,7 +71,6 @@ body {
         }
     }
 
-    padding: 35px 15px;
 
     // non-standard & it will not work for every user
     // sets the color of the highlight that appears over a link while it's being tapped

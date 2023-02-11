@@ -4,6 +4,50 @@ Portfolio Section
 .portfolio-section {
     padding-block-end: 50px;
 
+    .filters {
+        margin-block-end: 1rem;
+
+        ul {
+            @include flex(center, center, row);
+
+            li {
+                @include font(400, 1rem, $main-color);
+                text-transform: capitalize;
+                position: relative;
+                cursor: pointer;
+
+                &:not(:last-of-type) {
+                    margin-inline-end: 1.5rem;
+                }
+
+                @include breakpoints(md) {
+                    font-size: .8rem;
+                }
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    @include size(0%, 1px);
+                    inset-block-end: -2px;
+                    inset-inline: 0;
+                    background-color: $main-color;
+                    transition: inline-size .3s ease;
+                }
+
+                &:hover,
+                &.active {
+                    &::after {
+                        inline-size: 100%;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+
     .portfolio-item {
         margin: 15px 0;
 

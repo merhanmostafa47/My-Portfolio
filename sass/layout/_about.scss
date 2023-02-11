@@ -11,6 +11,10 @@ About Section
             border-radius: 0.625rem;
             max-inline-size: 22.5rem;
             margin: auto;
+            overflow: hidden;
+            @include breakpoints(md){
+                margin-block-end: 1rem;
+            }
 
             img {
                 max-inline-size: 100%;

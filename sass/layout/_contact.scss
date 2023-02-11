@@ -52,11 +52,11 @@ Contact Section
     }
 
     .contact-info {
-        padding: 0 15px;
+        padding: 0 0.9375rem;
 
         @include breakpoints(md) {
             order: 1;
-            margin-block-end: 15px;
+            margin-block-end: 0.9375rem;
             padding: 0;
         }
 
@@ -65,12 +65,21 @@ Contact Section
             padding: 0 0 0 20px;
 
             h3 {
-                @include font(500, 20px, $blue-dark);
+                @include font(500, 1.25rem, $blue-dark);
                 text-transform: capitalize;
                 margin: 0 0 5px;
 
                 @include breakpoints(xs) {
-                    font-size: 18px
+                    font-size: 1.125rem
+                }
+            }
+
+            a {
+                @include font(300, 1rem, $blue-dark);
+                transition: color .3s ease;
+
+                &:hover {
+                    color: $main-color
                 }
             }
 
@@ -79,7 +88,7 @@ Contact Section
 
                 a {
                     @include flex(center, center, row);
-                    @include size(40px, 40px);
+                    @include size(2.5rem, 2.5rem);
                     margin: 6px 4px 0 0;
                     background-color: $white-alpha-25;
                     border: 1px solid $white-alpha-40;
@@ -88,7 +97,7 @@ Contact Section
                     transition: all .3s ease;
 
                     @include breakpoints(xs) {
-                        @include size(35px, 35px);
+                        @include size(2.1875rem, 2.1875rem);
                         font-size: .8rem;
                     }
 
