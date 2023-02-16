@@ -33,6 +33,7 @@ h1,
 h2 {
   font-weight: 600;
   line-height: 1.6;
+  text-align: balance;
 }
 
 h3,
@@ -716,6 +717,7 @@ Home Section
 .home-section .container .home-image .img-box img {
   max-inline-size: 100%;
   object-fit: contain;
+  aspect-ratio: 1;
   border-radius: 50%;
 }
 
@@ -930,6 +932,7 @@ Portfolio Section
 @media (max-width: 991px) {
   .portfolio-section .filters ul li {
     font-size: 0.8rem;
+    text-align: center;
   }
 }
 .portfolio-section .filters ul li::after {
@@ -962,8 +965,10 @@ Portfolio Section
 }
 .portfolio-section .portfolio-item .portfolio-item-thumbnail img {
   max-inline-size: 100%;
+  block-size: 12rem;
+  inline-size: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .portfolio-section .portfolio-item .portfolio-item-title {
   font-weight: 500;
@@ -1079,7 +1084,7 @@ Portfolio popup
   font-weight: 300;
 }
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li span a {
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: #e02f6b;
 }
 

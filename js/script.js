@@ -76,6 +76,7 @@ document.addEventListener("click", (e) => {
       document.body.classList.remove("hide-scrolling");
       navToggler.classList.remove("hide");
       document.querySelector(".overlay").classList.remove("active");
+      document.getElementById("all").click();
     }, 500);
   }
 });
@@ -108,9 +109,6 @@ tabsContainer.addEventListener("click", (e) => {
 Projects Filter
 ---------------------------*/
 let dir = $("html").attr("dir");
-$(window).on("load", () => {
-  $(".portfolio-section .filters ul li.active").click();
-});
 
 // Products Grid
 var $projectsGrid = $(".projects-grid").isotope({
