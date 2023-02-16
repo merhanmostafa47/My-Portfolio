@@ -169,3 +169,16 @@ document.addEventListener("click", (e) => {
     togglePortfolioPopup();
   }
 });
+
+// Form Submit
+$("#contact__form").on("submit", function (e) {
+  e.preventDefault();
+  emailjs
+    .sendForm("service_4pmkd03", "template_i5x1ysm", "#contact__form")
+    .then(
+      function (response) {},
+      function (e) {
+        $("#contact__form")[0].reset();
+      }
+    );
+});

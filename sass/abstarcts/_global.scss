@@ -57,7 +57,7 @@ body {
     background-image: linear-gradient(to bottom right, $pink-light, $cyan-light);
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    @include font(300, 1rem,$blue-dark);
+    @include font(300, 1rem, $blue-dark);
     line-height: 1.6;
     overflow-x: hidden;
     padding: 35px 15px;
