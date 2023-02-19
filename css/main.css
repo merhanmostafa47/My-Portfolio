@@ -33,7 +33,6 @@ h1,
 h2 {
   font-weight: 600;
   line-height: 1.6;
-  text-align: balance;
 }
 
 h3,
@@ -423,7 +422,7 @@ Preloader 2
 }
 .ctn-preloader.loaded .loader-section .bg {
   width: 0;
-  transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
 }
 
 @keyframes spinner {
@@ -717,7 +716,6 @@ Home Section
 .home-section .container .home-image .img-box img {
   max-inline-size: 100%;
   object-fit: contain;
-  aspect-ratio: 1;
   border-radius: 50%;
 }
 
