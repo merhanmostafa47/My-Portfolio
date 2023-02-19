@@ -204,7 +204,7 @@ button {
   inset-block-start: 0;
   background-color: #e02f6b;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.9;
   transition: inline-size 0.3s ease;
 }
 .btn:hover::before {
@@ -1082,7 +1082,7 @@ Portfolio popup
   font-weight: 300;
 }
 .portfolio-popup .pp-inner .pp-content .pp-body .general-info ul li span a {
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #e02f6b;
 }
 
