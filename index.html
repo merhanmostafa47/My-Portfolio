@@ -1249,41 +1249,47 @@
           </div>
           <div class="row">
             <div class="contact-form col-lg-6 col-md-12">
-              <form id="contact__form">
-                <div class="input-group">
+              <form id="contact__form" class="needs-validation" novalidate>
+                <div class="input-group has-validation">
                   <input
                     type="text"
                     name="name"
                     placeholder="name"
-                    class="input-control"
+                    class="form-control"
                     required
                   />
+                  <div class="invalid-feedback">Not allowed to be empty</div>
                 </div>
-                <div class="input-group">
+                <div class="input-group has-validation">
                   <input
                     type="email"
                     name="email"
                     placeholder="email"
-                    class="input-control"
+                    class="form-control"
                     required
                   />
+                  <div class="invalid-feedback">Write a valid email.</div>
                 </div>
-                <div class="input-group">
+                <div class="input-group has-validation">
                   <input
                     type="text"
                     name="subject"
                     placeholder="subject"
-                    class="input-control"
+                    class="form-control"
                     required
                   />
+                  <div class="invalid-feedback">Not allowed to be empty</div>
                 </div>
-                <div class="input-group">
+                <div class="input-group has-validation">
                   <textarea
                     name="message"
                     placeholder="message"
-                    class="input-control"
+                    class="form-control"
                     required
                   ></textarea>
+                  <div class="invalid-feedback">
+                    Describe the subject in detail
+                  </div>
                 </div>
                 <div class="submit-btn">
                   <button class="btn" type="submit">send message</button>
@@ -1367,8 +1373,8 @@
       </div>
     </div>
     <!-- Porfolio item detail popup end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

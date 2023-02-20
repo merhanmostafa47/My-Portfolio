@@ -13,7 +13,7 @@ Contact Section
             inline-size: 100%;
             margin-block-end: 30px;
 
-            .input-control {
+            .form-control {
                 display: block;
                 padding: 0 20px;
                 @include size(100%, 3.125rem);
@@ -22,6 +22,7 @@ Contact Section
                 font-family: inherit;
                 @include font(400, 1rem, $blue-dark);
                 background-color: $white-alpha-25;
+                box-shadow: none;
                 transition: border-color .3s ease;
 
                 @include breakpoints(xs) {
@@ -43,10 +44,19 @@ Contact Section
                 }
             }
 
-            textarea.input-control {
+            textarea.form-control {
                 block-size: 120px;
                 padding-block-start: 15px;
                 resize: none;
+            }
+
+            .invalid-feedback {
+                margin-inline-start: 1rem;
+                margin-block-start: 0.5rem;
+
+                @include breakpoints(md) {
+                    font-size: .8rem;
+                }
             }
         }
     }

@@ -1101,7 +1101,7 @@ Contact Section
   inline-size: 100%;
   margin-block-end: 30px;
 }
-.contact-section .contact-form .input-group .input-control {
+.contact-section .contact-form .input-group .form-control {
   display: block;
   padding: 0 20px;
   inline-size: 100%;
@@ -1113,14 +1113,15 @@ Contact Section
   font-size: 1rem;
   color: #18293c;
   background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
   transition: border-color 0.3s ease;
 }
 @media (max-width: 575px) {
-  .contact-section .contact-form .input-group .input-control {
+  .contact-section .contact-form .input-group .form-control {
     font-size: 0.8rem;
   }
 }
-.contact-section .contact-form .input-group .input-control::placeholder {
+.contact-section .contact-form .input-group .form-control::placeholder {
   font-weight: 300;
   font-size: 1rem;
   color: #18293c;
@@ -1128,17 +1129,26 @@ Contact Section
   text-transform: capitalize;
 }
 @media (max-width: 575px) {
-  .contact-section .contact-form .input-group .input-control::placeholder {
+  .contact-section .contact-form .input-group .form-control::placeholder {
     font-size: 0.8rem;
   }
 }
-.contact-section .contact-form .input-group .input-control:focus {
+.contact-section .contact-form .input-group .form-control:focus {
   border-color: rgba(255, 255, 255, 0.4);
 }
-.contact-section .contact-form .input-group textarea.input-control {
+.contact-section .contact-form .input-group textarea.form-control {
   block-size: 120px;
   padding-block-start: 15px;
   resize: none;
+}
+.contact-section .contact-form .input-group .invalid-feedback {
+  margin-inline-start: 1rem;
+  margin-block-start: 0.5rem;
+}
+@media (max-width: 991px) {
+  .contact-section .contact-form .input-group .invalid-feedback {
+    font-size: 0.8rem;
+  }
 }
 .contact-section .contact-info {
   padding: 0 0.9375rem;
