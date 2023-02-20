@@ -27,7 +27,7 @@ About Section
         padding: 0 1rem;
 
         @include breakpoints(sm) {
-            margin-block-start: 1.875rem;
+            margin-block-start: 0;
         }
 
         p {

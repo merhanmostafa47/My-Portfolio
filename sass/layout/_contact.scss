@@ -61,6 +61,27 @@ Contact Section
         }
     }
 
+    .message-sent {
+        background-color: $white-alpha-25;
+        border: 1px solid $white-alpha-40;
+        border-radius: 25px;
+        padding: 2rem;
+        block-size: auto;
+        text-align: center;
+        display: none;
+
+        .envelope-img {
+            max-block-size: 16rem;
+            margin-block-end: 1rem;
+
+            img {
+                max-inline-size: 100%;
+                object-fit: cover;
+                max-block-size: 16rem;
+            }
+        }
+    }
+
     .contact-info {
         padding: 0 0.9375rem;
 
@@ -99,7 +120,7 @@ Contact Section
                 a {
                     @include flex(center, center, row);
                     @include size(2.5rem, 2.5rem);
-                    margin: 6px 4px 0 0;
+                    margin: 6px 6px 0 0;
                     background-color: $white-alpha-25;
                     border: 1px solid $white-alpha-40;
                     border-radius: 50%;

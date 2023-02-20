@@ -747,7 +747,7 @@ About Section
 }
 @media (max-width: 767px) {
   .about-section .about-text {
-    margin-block-start: 1.875rem;
+    margin-block-start: 0;
   }
 }
 .about-section .about-text p {
@@ -1150,6 +1150,24 @@ Contact Section
     font-size: 0.8rem;
   }
 }
+.contact-section .message-sent {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding: 2rem;
+  block-size: auto;
+  text-align: center;
+  display: none;
+}
+.contact-section .message-sent .envelope-img {
+  max-block-size: 16rem;
+  margin-block-end: 1rem;
+}
+.contact-section .message-sent .envelope-img img {
+  max-inline-size: 100%;
+  object-fit: cover;
+  max-block-size: 16rem;
+}
 .contact-section .contact-info {
   padding: 0 0.9375rem;
 }
@@ -1198,7 +1216,7 @@ Contact Section
   flex-direction: row;
   inline-size: 2.5rem;
   block-size: 2.5rem;
-  margin: 6px 4px 0 0;
+  margin: 6px 6px 0 0;
   background-color: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
