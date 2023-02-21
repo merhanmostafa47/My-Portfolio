@@ -1044,6 +1044,14 @@ Portfolio popup
   inset-inline-end: -40px;
   inset-block-start: -40px;
 }
+.portfolio-popup .pp-inner .pp-content .pp-header .pp-close img {
+  max-inline-size: 100%;
+  object-fit: contain;
+  filter: invert(26%) sepia(49%) saturate(3242%) hue-rotate(318deg) brightness(94%) contrast(91%);
+}
+.portfolio-popup .pp-inner .pp-content .pp-header .pp-close:hover img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
 .portfolio-popup .pp-inner .pp-content .pp-header .pp-thumbnail img {
   border-radius: 10px;
 }
