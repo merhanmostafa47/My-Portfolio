@@ -87,7 +87,7 @@ Preloader 2
             user-select: none;
 
             @include breakpoints(md) {
-                font-size: 3.5em;
+                font-size: 2.5em;
             }
 
             @media screen and (max-width: 500px) {
