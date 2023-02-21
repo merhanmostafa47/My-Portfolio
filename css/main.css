@@ -325,7 +325,7 @@ Preloader 2
 }
 @media (max-width: 991px) {
   .ctn-preloader .animation-preloader .txt-loading {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1220,19 +1220,24 @@ Contact Section
   background-color: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  color: #e02f6b;
   transition: all 0.3s ease;
+}
+.contact-section .contact-info .contact-info-item .social-links a img {
+  filter: invert(26%) sepia(49%) saturate(3242%) hue-rotate(318deg) brightness(94%) contrast(91%);
+  max-inline-size: 100%;
+  object-fit: contain;
 }
 @media (max-width: 575px) {
   .contact-section .contact-info .contact-info-item .social-links a {
     inline-size: 2.1875rem;
     block-size: 2.1875rem;
-    font-size: 0.8rem;
   }
 }
 .contact-section .contact-info .contact-info-item .social-links a:hover {
-  color: #fff;
   background-color: #e02f6b;
+}
+.contact-section .contact-info .contact-info-item .social-links a:hover img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 /*# sourceMappingURL=main.css.map */
