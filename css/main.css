@@ -751,8 +751,15 @@ About Section
   }
 }
 .about-section .about-text p {
-  line-height: 1.8;
+  line-height: 2;
   margin-block-end: 20px;
+  text-align: justify;
+  inline-size: 92%;
+}
+@media (max-width: 767px) {
+  .about-section .about-text p {
+    inline-size: 100%;
+  }
 }
 .about-section .about-text h3 {
   font-weight: 500;

@@ -31,8 +31,14 @@ About Section
         }
 
         p {
-            line-height: 1.8;
-            margin-block-end: 20px
+            line-height: 2;
+            margin-block-end: 20px;
+            text-align: justify;
+            inline-size: 92%;
+
+            @include breakpoints(sm) {
+                inline-size: 100%;
+            }
         }
 
         h3 {
